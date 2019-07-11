@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
 html, body {
     font-family: 'Titillium Web', sans-serif;
     text-align: center;
@@ -32,4 +35,14 @@ input {
   vertical-align: top;
   font-size:26px;
   margin-right:5px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover,
+a:active {
+  color: grey;
 }
