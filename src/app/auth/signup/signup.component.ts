@@ -7,7 +7,11 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-  selectedRole:string = ''
+  roles = [
+    {value: 'coach', name: 'a coach!', phrase: 'A good coach can change a game, a great coach can change a life.'},
+    {value: 'athlete', name: 'an athlete!', phrase: 'You are your only limit!'},
+    {value: 'both', name: 'both a coach and an athlete!', phrase: 'The harder the battle, the sweeter the victory!'},
+    ]
 
   constructor() { }
 

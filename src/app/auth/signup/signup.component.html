@@ -1,5 +1,10 @@
 <section class="signup-form">
-	<form fxLayout="column" fxLayoutAlign="center center" #f="ngForm" (ngSubmit)="onSubmit(f)">
+	<form 
+  fxLayout="column" 
+  fxLayoutAlign="center center" 
+  fxLayoutGap="10px"
+  #f="ngForm" 
+  (ngSubmit)="onSubmit(f)">
 		<mat-form-field>
 			<input 
       type="email"
@@ -28,6 +33,28 @@
       <mat-hint align="end">{{ pwInput.value?.length }} / 6</mat-hint>
     </mat-form-field>
 
+    <div>
+      <mat-form-field style="width: 150px">
+        <input 
+        type="name"
+        matInput
+        placeholder="first name"
+        ngModel
+        name="nameFirst"
+        required>
+      </mat-form-field>
+
+      <mat-form-field style="width: 150px">
+        <input 
+        type="name"
+        matInput
+        placeholder="last name"
+        ngModel
+        name="nameFirst"
+        required>
+      </mat-form-field>
+    </div>
+
     <!-- <mat-form-field>
       <input
       matInput
@@ -45,20 +72,23 @@
 
     <mat-form-field>
       <mat-label>I am...</mat-label>
-       <mat-select
-       [(ngModel)]="selectedRole"
+      <mat-select
+       ngModel
        name="role"
-       required>
-        <mat-option [value]="coach">a coach</mat-option>
-        <mat-option [value]="athlete">an athlete</mat-option>
-        <mat-option [value]="both">both a coach and an athlete</mat-option>
+       required
+       #roleSelection="ngModel">
+        <mat-option *ngFor="let role of roles" [value]="role">{{ role.name }}</mat-option>
       </mat-select>
+      <mat-error *ngIf="roleSelection.hasError('required')">Please choose a role</mat-error>
+      <mat-hint>{{roleSelection.value?.phrase}}</mat-hint>
     </mat-form-field>
+
 
     <button
     mat-raised-button
     color="primary"
-    type="submit">
+    type="submit"
+    [disabled]="f.invalid">
     Submit
     </button>
   </form>
