@@ -2,7 +2,9 @@ import {
   MatButtonModule, 
   MatIconModule, 
   MatSidenavModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatFormFieldModule,
+  MatInputModule
   } from '@angular/material';
 
 import { NgModule } from '@angular/core';
@@ -12,11 +14,15 @@ import { CommonModule } from '@angular/common';
   imports: [
     CommonModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   exports: [
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule
   ]
 })
 export class MaterialModule { }
