@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router'
 
-/*
 import { WelcomeComponent } from './welcome/welcome.component'
+
+/*
 import { MatchesComponent } from './matches/matches.component'
 import { LiveStreamComponent } from './live-stream/live-stream.component'
 

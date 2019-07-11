@@ -8,10 +8,11 @@ import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { TrainingComponent } from './auth/training/training.component';
 import { CoachSessionComponent } from './coach/coach-session/coach-session.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, MaterialModule ],
-  declarations: [ AppComponent, LoginComponent, SignupComponent, TrainingComponent, CoachSessionComponent ],
+  declarations: [ AppComponent, LoginComponent, SignupComponent, TrainingComponent, CoachSessionComponent, WelcomeComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
