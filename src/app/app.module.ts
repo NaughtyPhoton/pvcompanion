@@ -10,6 +10,8 @@ import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { CoachSessionComponent } from './coach/coach-session/coach-session.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { HeaderComponent } from './navigation/header/header.component';
+import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { AppRoutingModule } from './app-routing.module'
 
 
@@ -27,7 +29,9 @@ import { AppRoutingModule } from './app-routing.module'
     LoginComponent, 
     SignupComponent, 
     CoachSessionComponent, 
-    WelcomeComponent
+    WelcomeComponent,
+    HeaderComponent,
+    SidenavListComponent
     ],
   bootstrap:    [ 
     AppComponent
