@@ -8,7 +8,8 @@ import {
   MatDatepickerModule,
   MatNativeDateModule,
   MatOptionModule,
-  MatSelectModule
+  MatSelectModule,
+  MatListModule
 } from '@angular/material';
 
 import { NgModule } from '@angular/core';
@@ -26,7 +27,8 @@ import { CommonModule } from '@angular/common';
     MatOptionModule,
     MatSelectModule,
     MatSidenavModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatListModule
   ],
   exports: [
     MatButtonModule,
@@ -38,7 +40,8 @@ import { CommonModule } from '@angular/common';
     MatOptionModule,
     MatSelectModule,
     MatSidenavModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatListModule
   ]
 })
 export class MaterialModule { }
