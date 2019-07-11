@@ -1,17 +1,65 @@
-<section>
-  <form fxLayout='column' fxLayoutAlign='center center'>
-    <mat-form-field>
-      <input 
+<section class="signup-form">
+	<form fxLayout="column" fxLayoutAlign="center center" #f="ngForm" (ngSubmit)="onSubmit(f)">
+		<mat-form-field>
+			<input 
       type="email"
       matInput
-      placeholder="email">
+      placeholder="email"
+      ngModel
+      email
+      name="email"
+      required
+      #emailInput="ngModel">
+      <mat-error *ngIf="emailInput.hasError('required')">Need an email..</mat-error>
+      <mat-error *ngIf="!emailInput.hasError('required')">Email is invalid</mat-error>
     </mat-form-field>
 
     <mat-form-field>
       <input 
       type="password"
       matInput
-      placeholder="password">
+      placeholder="password"
+      ngModel
+      name="password"
+      required
+      minlength="6"
+      #pwInput="ngModel">
+      <mat-hint align="start">At least 6 characters long</mat-hint>
+      <mat-hint align="end">{{ pwInput.value?.length }} / 6</mat-hint>
     </mat-form-field>
+
+    <!-- <mat-form-field>
+      <input
+      matInput
+      placeholder="Your birthdate"
+      [matDatepicker]="picker"
+      ngModel
+      name="birthdate"
+      required>
+      <mat-datepicker-toggle 
+      [for]="picker"
+      matSuffix>
+      </mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field> -->
+
+    <mat-form-field>
+      <mat-label>I am...</mat-label>
+       <mat-select
+       [(ngModel)]="selectedRole"
+       name="role"
+       required>
+        <mat-option [value]="coach">a coach</mat-option>
+        <mat-option [value]="athlete">an athlete</mat-option>
+        <mat-option [value]="both">both a coach and an athlete</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button
+    mat-raised-button
+    color="primary"
+    type="submit">
+    Submit
+    </button>
   </form>
 </section>
