@@ -6,7 +6,8 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./sidenav-list.component.css']
 })
 export class SidenavListComponent implements OnInit {
-  sidenavClose = new EventEmitter<void>()
+  @Output()
+  sidenavToggle = new EventEmitter<void>()
 
   constructor() { }
 
@@ -14,7 +15,7 @@ export class SidenavListComponent implements OnInit {
   }
 
   onClose() {
-      this.sidenavClose.emit()
+    this.sidenavToggle.emit()
   }
 
 }
