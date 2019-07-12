@@ -3,22 +3,12 @@ import { Routes, RouterModule } from '@angular/router'
 
 import { WelcomeComponent } from './welcome/welcome.component'
 import { SignupComponent } from './auth/signup/signup.component'
-
-/*
-import { MatchesComponent } from './matches/matches.component'
-import { LiveStreamComponent } from './live-stream/live-stream.component'
+import { LoginComponent } from './auth/login/login.component'
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
-  { path: 'welcome', component: WelcomeComponent },
-  { path: 'matches', component: MatchesComponent },
-  { path: 'livestream', component: LiveStreamComponent },
-]
-*/
-
-const routes: Routes = [
-  { path: '', component: WelcomeComponent },
-  { path: 'signup', component: SignupComponent }
+  { path: 'signup', component: SignupComponent },
+  // { path: 'login', component: LoginComponent }
 ]
 
 @NgModule({
